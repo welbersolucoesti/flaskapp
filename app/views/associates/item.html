@@ -1,0 +1,9 @@
+{% extends 'layouts/app.html' %}
+{% block content %}
+    <h1>{{data.1}}</h1>
+    <ul>
+        <li><b>CNPJ: </b>{{data.0}}</li>
+        <li><b>Endereço: </b>{{data.5}}, {{data.6}}, {{data.7}}-ES</li>
+        <li><b>CEP: </b>{{data.3}}</li>
+    </ul>
+{% endblock %}

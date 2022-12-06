@@ -1,0 +1,20 @@
+{% extends 'layouts/app.html' %}
+{% block content %}
+    <h1>Associados ({{data|length}} lojas)</h1>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <td>CNPJ</td>
+                <td>RAZAO SOCIAL</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for line in data %}
+                <tr>
+                    <td>{{line.0}}</td>
+                    <td><a href="/associado/{{line.0}}">{{line.1}}</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

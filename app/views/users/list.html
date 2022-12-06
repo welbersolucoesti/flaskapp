@@ -1,0 +1,22 @@
+{% extends 'layouts/app.html' %}
+{% block content %}
+    <h1>Usuários ({{data|length}} cadastrados)</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <td>CPF</td>
+                    <td>NOME</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for line in data %}
+                    <tr>
+                        <td>{{line.5}}</td>
+                        <td><a href="/usuario/{{line.0}}">{{line.7}}</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
